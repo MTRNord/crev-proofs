@@ -1,0 +1,47 @@
+----- BEGIN CREV PROOF -----
+kind: package review
+version: -1
+date: "2021-02-01T21:00:28.641741666+01:00"
+from:
+  id-type: crev
+  id: iyvJvjb_UXz6ZCwY9qR3znBoRb2cGE14p6oMSauk8zY
+  url: "https://github.com/MTRNord/crev-proofs"
+package:
+  source: "https://crates.io"
+  name: matrix-sdk
+  version: 0.2.0
+  revision: 4f2cad8f626068f05d567588d8398d0952536a46
+  digest: Bpi6aGUyBVeUi3H0lYAhPO5QE3jNKgJ7ifKggkv3iS4
+review:
+  thoroughness: medium
+  understanding: medium
+  rating: positive
+comment: |-
+  =Review Matrix-SDK=
+  
+  ==Cargo audit==
+  
+  - Dependency affected by smallvec bug https://rustsec.org/advisories/RUSTSEC-2021-0003
+  - Mockito dependency uses unmaintained crate "difference"
+  - Directly uses unmaintained "dirs" crate
+  - Through a deep chain of deps uses "net2" which is unmaintained
+  - Indirectly uses "stdweb"
+  
+  ==Cargo clippy==
+  
+  All green
+  
+  ==Cargo test==
+  
+  All green
+  
+  ==Code==
+  
+  - Lots of well documentation
+  - Easy to reach community channel to ask questions
+  - Many tests which all are green
+  - Multiple good documented examples
+----- SIGN CREV PROOF -----
+N3CE_KXV9IyHYeYcxEs00qc5X4R5faG5vsO8RwZwrOafefLwKvLlMPs1jek3xXs79Vq397vDlm9UndsG7cibAw
+----- END CREV PROOF -----
+
